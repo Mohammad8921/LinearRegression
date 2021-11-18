@@ -33,7 +33,7 @@ class LinearRegression:
             self.JHist.append((self.computeCost(X, y, theta), theta))
             print("Iteration: ", i+1, " Cost: ", self.JHist[i][0], " Theta: ", theta)
             # TODO:  add update equation here
-            theta = theta - (2*self.alpha/n)*(np.dot(X.T, np.dot(X, theta))- np.dot(X.T, y))
+            theta = theta - (self.alpha/n)*(np.dot(X.T, np.dot(X, theta))- np.dot(X.T, y))
     
         return theta
 
